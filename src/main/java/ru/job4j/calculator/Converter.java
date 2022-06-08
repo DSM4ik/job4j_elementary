@@ -7,8 +7,16 @@ public class Converter {
     }
 
     public static float rubleToDollar(float value) {
-        return value / 60; /* формула перевода рублей в доллары. */
+        return value / 120; /* формула перевода рублей в доллары. */
 
+    }
+
+    public static boolean testResultRubleToDollar(int in, int expected) {
+        return Converter.rubleToDollar(in) == expected;
+    }
+
+    public static boolean testResultRubleToEuro(int in, int expected) {
+        return Converter.rubleToDollar(in) == expected;
     }
 
     public static void main(String[] args) {
@@ -16,5 +24,10 @@ public class Converter {
         float dollar = Converter.rubleToDollar(150);
         System.out.println("140 rubles are " + euro + " euro.");
         System.out.println("140 rubles are " + dollar + " euro.");
+
+        //тестирование
+        System.out.println(testResultRubleToDollar(120, 1));
+        System.out.println(testResultRubleToEuro(140, 2));
+
     }
 }
