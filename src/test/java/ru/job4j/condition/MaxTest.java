@@ -27,4 +27,18 @@ public class MaxTest {
         int out = Max.max(5,5);
         Assert.assertEquals(expected, out, 0.0);
     }
+
+    @Test
+    public void when6eq5eq4() {
+        int expected = 6;
+        int out = Max.max(5,5, 6);
+        Assert.assertEquals(expected, out, 0.0);
+    }
+
+    @Test
+    public void when3eq5eq4eq7() {
+        int expected = 7;
+        int out = Max.max(5,7, 6, 4);
+        Assert.assertEquals(expected, out, 0.0);
+    }
 }
