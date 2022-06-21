@@ -10,7 +10,7 @@ public class CounterTest {
     @Test
     public void when0and10then30() {
         int expected = 30;
-        int out = Counter.sumByEven(0,10);
+        int out = Counter.sumByEven(0, 10);
         Assert.assertEquals(30, out);
     }
 }
